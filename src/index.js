@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import {
     Route,
@@ -16,11 +17,14 @@ import CustomComponents from "./views/custom-components/custom-components.jsx";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-    <HashRouter history={hist}>
-        <Switch>
-            <Route path="/custom-components" component={CustomComponents} />
-            <Route path="/" component={Components} />
-        </Switch>
-    </HashRouter>,
+    // <HashRouter history={hist}>
+    //     <Switch>
+    //         <Route path="/custom-components" component={CustomComponents} />
+    //         <Route path="/" component={Components} />
+    //     </Switch>
+    // </HashRouter>
+    <BrowserRouter>
+        <Components />
+     </BrowserRouter>,
     document.getElementById("root")
 );

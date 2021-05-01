@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { Container, NavbarBrand, Navbar, Nav, NavItem, NavbarToggler, Collapse } from 'reactstrap';
 
-import logo from '../../assets/images/logos/white-text.png';
+import logo from '../../assets/images/logos/vaxicon-removebg-preview.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +19,11 @@ const Header = () => {
             <div className="header6">
                 <Container className="po-relative">
                     <Navbar className="navbar-expand-lg h6-nav-bar">
-                        <NavbarBrand href="/"><img src={logo} alt="wrapkit" /></NavbarBrand>
+                        <NavbarBrand href="/"><img src={logo} alt="wrapkit" height="100"/></NavbarBrand>
                         <NavbarToggler onClick={toggle}><span className="ti-menu"></span></NavbarToggler>
                         <Collapse isOpen={isOpen} navbar className="hover-dropdown font-14 ml-auto" id="h6-info">
                             <Nav navbar className="ml-auto">
-                                <NavItem>
+                                {/* <NavItem>
                                     <Link className="nav-link" to={"/components"}>
                                         Components
 										</Link>
@@ -32,14 +32,15 @@ const Header = () => {
                                     <Link className="nav-link" to={"/custom-components"}>
                                         Custom-Components
                                     	</Link>
-                                </NavItem>
+                                </NavItem> */}
                             </Nav>
-                            <div className="act-buttons">
+                            {/* <div className="act-buttons">
                                 <Link to="/#coming" className="btn btn-success-gradiant font-14">Upgrade To Pro</Link>
-                            </div>
+                            </div> */}
                         </Collapse>
-                    </Navbar>
+                    </Navbar> 
                 </Container>
+                
             </div>
         </div>
     );
